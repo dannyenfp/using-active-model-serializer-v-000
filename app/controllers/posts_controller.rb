@@ -9,10 +9,14 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
       #BEFORE using a serializer:
+<<<<<<< HEAD
       respond_to do |format|
       format.html
       format.json { render json: @post, status: 200 }
     end 
+=======
+      render json: @post, status: 200
+>>>>>>> b879e22e9b9976f5861439673687d4d3e0dd3a30
   end
 
   def new
